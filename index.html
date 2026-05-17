@@ -1,1 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <title>Prachi Patel Photography</title>
+
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f7f5f0;
+      color: #111;
+      font-family: 'Inter', sans-serif;
+    }
+
+    nav {
+      padding: 28px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(247, 245, 240, 0.88);
+      backdrop-filter: blur(10px);
+      z-index: 10;
+    }
+
+    nav h1 {
+      font-size: 16px;
+      letter-spacing: 3px;
+      font-weight: 500;
+      font-family: 'Inter', sans-serif;
+    }
+
+    nav a {
+      color: #111;
+      text-decoration: none;
+      margin-left: 25px;
+      font-size: 14px;
+      transition: 0.3s ease;
+    }
+
+    nav a:hover {
+      opacity: 0.6;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 120px 20px 60px;
+    }
+
+    .hero h2 {
+      font-size: 72px;
+      font-weight: 300;
+      letter-spacing: 4px;
+      margin-bottom: 20px;
+      font-family: 'Cormorant Garamond', serif;
+    }
+
+    .hero p {
+      color: #666;
+      letter-spacing: 1.5px;
+      font-size: 15px;
+    }
+
+    .intro {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 20px 25px 90px;
+      text-align: center;
+      line-height: 1.8;
+      color: #444;
+      font-size: 17px;
+    }
+
+    .gallery {
+      padding: 30px 45px 100px;
+      columns: 3;
+      column-gap: 22px;
+    }
+
+    .photo {
+      break-inside: avoid;
+      margin-bottom: 22px;
+    }
+
+    .photo img {
+      width: 100%;
+      border-radius: 14px;
+      display: block;
+      transition: 0.3s ease;
+    }
+
+    .photo img:hover {
+      transform: scale(1.01);
+      opacity: 0.92;
+    }
+
+    .photo p {
+      font-size: 13px;
+      color: #555;
+      margin-top: 8px;
+      line-height: 1.5;
+    }
+
+    .about {
+      max-width: 760px;
+      margin: auto;
+      padding: 100px 25px;
+      text-align: center;
+    }
+
+    .about h3 {
+      font-size: 38px;
+      font-weight: 300;
+      margin-bottom: 25px;
+      font-family: 'Cormorant Garamond', serif;
+    }
+
+    .about p {
+      color: #444;
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 50px;
+      color: #777;
+      font-size: 14px;
+    }
+
+    @media (max-width: 900px) {
+      .gallery {
+        columns: 2;
+      }
+
+      .hero h2 {
+        font-size: 48px;
+      }
+    }
+
+    @media (max-width: 600px) {
+
+      nav {
+        padding: 22px;
+      }
+
+      nav a {
+        margin-left: 12px;
+      }
+
+      .gallery {
+        columns: 1;
+        padding: 25px;
+      }
+
+      .hero h2 {
+        font-size: 36px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <h1>PRACHI PATEL ARCHIVE</h1>
+
+    <div>
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+
+    <div>
+      <h2>FRAGMENTS OF NEW YORK</h2>
+
+      <p>
+        Architecture • Texture • Urban Rhythm
+      </p>
+    </div>
+
+  </section>
+
+  <section class="intro">
+
+    <p>
+      A visual study of New York City architecture,
+      focusing on repetition, ornament, cast-iron details,
+      and the quiet rhythm of urban structures.
+    </p>
+
+  </section>
+
+  <section class="gallery" id="work">
+
+    <div class="photo">
+      <img src="IMG_2898.jpeg">
+      <p>Repetition and symmetry across a historic New York facade.</p>
+    </div>
+
+    <div class="photo">
+      <img src="IMG_2897.jpeg">
+      <p>Soft architectural details shaped by light, texture, and structure.</p>
+    </div>
+
+    <div class="photo">
+      <img src="IMG_2899.jpeg">
+      <p>Vertical rhythm created through windows, columns, and ornament.</p>
+    </div>
+
+    <div class="photo">
+      <img src="IMG_2900.jpeg">
+      <p>Decorative ironwork and layered historic detail in downtown Manhattan.</p>
+    </div>
+
+    <div class="photo">
+      <img src="IMG_3067 2.jpeg">
+      <p>Geometry and repetition within a red brick urban facade.</p>
+    </div>
+
+    <div class="photo">
+      <img src="IMG_3300.jpeg">
+      <p>Surface detail as a record of material, history, and design.</p>
+    </div>
+
+    <div class="photo">
+      <img src="IMG_3395.jpeg">
+      <p>Scale and weight expressed through stone, arches, and shadow.</p>
+    </div>
+
+    <div class="photo">
+      <img src="IMG_3639.jpeg">
+      <p>Gothic forms emerging through vertical lines and carved detail.</p>
+    </div>
+
+    <div class="photo">
+      <img src="IMG_3640.jpeg">
+      <p>Ornament and structure meet through repeated carved patterns.</p>
+    </div>
+
+    <div class="photo">
+      <img src="IMG_4103(2).jpeg">
+      <p>Figures embedded into architecture, turning facade into narrative.</p>
+    </div>
+
+  </section>
+
+  <section class="about" id="about">
+
+    <h3>About</h3>
+
+    <p>
+      Prachi Patel is a New York-based creative exploring architecture,
+      texture, and visual storytelling through photography and design.
+      Her work observes patterns, rhythm, and atmosphere within the city’s built environment.
+    </p>
+
+  </section>
+
+  <footer>
+    © 2026 Prachi Patel
+  </footer>
+
+</body>
+</html>
