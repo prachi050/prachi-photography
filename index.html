@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
-  <title>Prachi Patel Photography</title>
+  <title>Prachi Patel Portfolio</title>
 
   <style>
     * {
@@ -101,11 +101,6 @@
       cursor: pointer;
       font-size: 12px;
       letter-spacing: 1px;
-      transition: 0.3s ease;
-    }
-
-    .toggle:hover {
-      opacity: 0.65;
     }
 
     .hero {
@@ -114,12 +109,12 @@
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 120px 20px 60px;
+      padding: 130px 20px 70px;
       animation: fadeUp 1.2s ease both;
     }
 
     .hero h2 {
-      font-size: 72px;
+      font-size: 78px;
       font-weight: 300;
       letter-spacing: 4px;
       margin-bottom: 20px;
@@ -127,28 +122,68 @@
     }
 
     .hero p {
-      color: #666;
-      letter-spacing: 1.5px;
-      font-size: 15px;
+      max-width: 720px;
+      margin: auto;
+      color: #555;
+      letter-spacing: 1.2px;
+      font-size: 16px;
+      line-height: 1.8;
     }
 
     body.dark .hero p,
     body.dark .intro,
     body.dark .photo p,
     body.dark .about p,
+    body.dark .project-note,
     body.dark footer {
       color: #b8b8b8;
     }
 
     .intro {
-      max-width: 760px;
+      max-width: 800px;
       margin: 0 auto;
-      padding: 20px 25px 90px;
+      padding: 20px 25px 100px;
       text-align: center;
-      line-height: 1.8;
+      line-height: 1.9;
       color: #444;
       font-size: 17px;
-      animation: fadeUp 1.2s ease both;
+    }
+
+    .section-title {
+      padding: 40px 45px 25px;
+      text-align: center;
+    }
+
+    .section-title h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 44px;
+      font-weight: 300;
+      margin-bottom: 12px;
+    }
+
+    .project-note {
+      max-width: 650px;
+      margin: auto;
+      color: #555;
+      line-height: 1.7;
+      font-size: 15px;
+    }
+
+    .tags {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .tags span {
+      border: 1px solid currentColor;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 12px;
+      letter-spacing: 1px;
+      opacity: 0.75;
     }
 
     .gallery {
@@ -193,6 +228,47 @@
       line-height: 1.5;
     }
 
+    .process {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 25px 110px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .process-card {
+      border: 1px solid rgba(120,120,120,0.3);
+      border-radius: 18px;
+      padding: 26px;
+      min-height: 180px;
+      opacity: 0;
+      transform: translateY(35px);
+      transition: opacity 0.9s ease, transform 0.9s ease;
+    }
+
+    .process-card.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .process-card h4 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28px;
+      font-weight: 300;
+      margin-bottom: 14px;
+    }
+
+    .process-card p {
+      color: #555;
+      line-height: 1.7;
+      font-size: 14px;
+    }
+
+    body.dark .process-card p {
+      color: #b8b8b8;
+    }
+
     .about {
       max-width: 760px;
       margin: auto;
@@ -209,7 +285,7 @@
     }
 
     .about h3 {
-      font-size: 38px;
+      font-size: 40px;
       font-weight: 300;
       margin-bottom: 25px;
       font-family: 'Cormorant Garamond', serif;
@@ -217,8 +293,21 @@
 
     .about p {
       color: #444;
-      line-height: 1.8;
+      line-height: 1.9;
       font-size: 16px;
+    }
+
+    .contact {
+      text-align: center;
+      padding: 70px 25px;
+    }
+
+    .contact a {
+      color: inherit;
+      text-decoration: none;
+      border-bottom: 1px solid currentColor;
+      margin: 0 10px;
+      font-size: 14px;
     }
 
     footer {
@@ -245,7 +334,11 @@
       }
 
       .hero h2 {
-        font-size: 48px;
+        font-size: 50px;
+      }
+
+      .process {
+        grid-template-columns: 1fr;
       }
     }
 
@@ -279,7 +372,7 @@
       }
 
       .hero h2 {
-        font-size: 36px;
+        font-size: 38px;
       }
     }
   </style>
@@ -297,6 +390,7 @@
       <button class="toggle" onclick="toggleMode()">Dark</button>
       <div>
         <a href="#work">Work</a>
+        <a href="#process">Process</a>
         <a href="#about">About</a>
       </div>
     </div>
@@ -305,18 +399,38 @@
   <section class="hero">
     <div>
       <h2>FRAGMENTS OF NEW YORK</h2>
-      <p>Architecture • Texture • Urban Rhythm</p>
+      <p>
+        Exploring architecture, rhythm, texture, and urban observation
+        through photography and design.
+      </p>
     </div>
   </section>
 
   <section class="intro">
     <p>
-      A visual study of New York City architecture, focusing on repetition,
-      ornament, cast-iron details, and the quiet rhythm of urban structures.
+      This project documents New York City’s built environment through repetition,
+      ornament, cast-iron details, stone surfaces, and quiet architectural rhythm.
+      The series connects photography with design thinking by observing how structure,
+      pattern, and atmosphere shape the way we experience the city.
+    </p>
+
+    <div class="tags">
+      <span>CAST IRON</span>
+      <span>ORNAMENT</span>
+      <span>FACADES</span>
+      <span>URBAN RHYTHM</span>
+      <span>TEXTURE</span>
+    </div>
+  </section>
+
+  <section class="section-title" id="work">
+    <h3>Selected Works</h3>
+    <p class="project-note">
+      A curated visual archive of architectural details, facades, and structural patterns across NYC.
     </p>
   </section>
 
-  <section class="gallery" id="work">
+  <section class="gallery">
 
     <div class="photo">
       <img src="IMG_2898.jpeg">
@@ -380,17 +494,57 @@
 
   </section>
 
+  <section class="section-title" id="process">
+    <h3>Process</h3>
+    <p class="project-note">
+      My process begins with observation: walking, framing, cropping, and identifying repeated visual systems in the city.
+    </p>
+  </section>
+
+  <section class="process">
+    <div class="process-card">
+      <h4>Observation</h4>
+      <p>
+        I look for rhythm in windows, columns, facades, shadows, and ornament,
+        treating the city as a visual system.
+      </p>
+    </div>
+
+    <div class="process-card">
+      <h4>Composition</h4>
+      <p>
+        I use cropping, symmetry, repetition, and negative space to turn architectural details
+        into structured visual studies.
+      </p>
+    </div>
+
+    <div class="process-card">
+      <h4>Design Connection</h4>
+      <p>
+        My photography connects to UI/UX and graphic design through hierarchy,
+        pattern, layout, and visual storytelling.
+      </p>
+    </div>
+  </section>
+
   <section class="about" id="about">
     <h3>About</h3>
 
     <p>
-      I’m Prachi Patel, a New York-based photographer and designer capturing
-      architectural details and visual rhythm throughout NYC.
+      I’m Prachi Patel, a New York-based designer and photographer exploring the
+      relationship between architecture, visual systems, and digital experience.
+      My work focuses on architectural details, rhythm, texture, and the atmosphere
+      of the built environment.
     </p>
   </section>
 
+  <section class="contact">
+    <a href="mailto:patelprachi670@gmail.com">Email</a>
+    <a href="https://github.com/prachi050" target="_blank">GitHub</a>
+  </section>
+
   <footer>
-    © 2026 Prachi Patel
+    © 2026 Prachi Patel · New York City
   </footer>
 
   <script>
@@ -398,6 +552,7 @@
       document.body.classList.toggle("dark");
 
       const button = document.querySelector(".toggle");
+
       if (document.body.classList.contains("dark")) {
         button.textContent = "Light";
       } else {
@@ -405,7 +560,7 @@
       }
     }
 
-    const revealItems = document.querySelectorAll(".photo, .about");
+    const revealItems = document.querySelectorAll(".photo, .about, .process-card");
 
     const revealOnScroll = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -424,4 +579,3 @@
 
 </body>
 </html>
-    
