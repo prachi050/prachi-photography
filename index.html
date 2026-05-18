@@ -11,21 +11,30 @@
   <title>Prachi Patel Photography</title>
 
   <style>
-
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       background: #f7f5f0;
       color: #111;
       font-family: 'Inter', sans-serif;
+      transition: background 0.4s ease, color 0.4s ease;
+    }
+
+    body.dark {
+      background: #0f0f0f;
+      color: #f7f5f0;
     }
 
     nav {
-      padding: 28px 50px;
+      padding: 24px 50px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -33,27 +42,70 @@
       top: 0;
       width: 100%;
       background: rgba(247, 245, 240, 0.88);
-      backdrop-filter: blur(10px);
+      backdrop-filter: blur(12px);
       z-index: 10;
+      transition: background 0.4s ease;
+    }
+
+    body.dark nav {
+      background: rgba(15, 15, 15, 0.88);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand img {
+      width: 34px;
+      height: auto;
+      mix-blend-mode: multiply;
+    }
+
+    body.dark .brand img {
+      filter: invert(1);
+      mix-blend-mode: screen;
     }
 
     nav h1 {
-      font-size: 16px;
+      font-size: 15px;
       letter-spacing: 3px;
       font-weight: 500;
-      font-family: 'Inter', sans-serif;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 25px;
     }
 
     nav a {
-      color: #111;
+      color: inherit;
       text-decoration: none;
-      margin-left: 25px;
+      margin-left: 22px;
       font-size: 14px;
-      transition: 0.3s ease;
+      transition: opacity 0.3s ease;
     }
 
     nav a:hover {
-      opacity: 0.6;
+      opacity: 0.55;
+    }
+
+    .toggle {
+      border: 1px solid currentColor;
+      background: transparent;
+      color: inherit;
+      padding: 7px 12px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 12px;
+      letter-spacing: 1px;
+      transition: 0.3s ease;
+    }
+
+    .toggle:hover {
+      opacity: 0.65;
     }
 
     .hero {
@@ -63,6 +115,7 @@
       justify-content: center;
       text-align: center;
       padding: 120px 20px 60px;
+      animation: fadeUp 1.2s ease both;
     }
 
     .hero h2 {
@@ -79,6 +132,14 @@
       font-size: 15px;
     }
 
+    body.dark .hero p,
+    body.dark .intro,
+    body.dark .photo p,
+    body.dark .about p,
+    body.dark footer {
+      color: #b8b8b8;
+    }
+
     .intro {
       max-width: 760px;
       margin: 0 auto;
@@ -87,6 +148,7 @@
       line-height: 1.8;
       color: #444;
       font-size: 17px;
+      animation: fadeUp 1.2s ease both;
     }
 
     .gallery {
@@ -97,19 +159,31 @@
 
     .photo {
       break-inside: avoid;
-      margin-bottom: 22px;
+      margin-bottom: 24px;
+      opacity: 0;
+      transform: translateY(35px);
+      transition: opacity 0.9s ease, transform 0.9s ease;
+    }
+
+    .photo.show {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     .photo img {
       width: 100%;
       border-radius: 14px;
       display: block;
-      transition: 0.3s ease;
+      transition: transform 0.5s ease, opacity 0.4s ease, filter 0.4s ease;
     }
 
     .photo img:hover {
-      transform: scale(1.01);
-      opacity: 0.92;
+      transform: scale(1.015);
+      opacity: 0.9;
+    }
+
+    body.dark .photo img {
+      filter: brightness(0.9) contrast(1.05);
     }
 
     .photo p {
@@ -124,6 +198,14 @@
       margin: auto;
       padding: 100px 25px;
       text-align: center;
+      opacity: 0;
+      transform: translateY(35px);
+      transition: opacity 0.9s ease, transform 0.9s ease;
+    }
+
+    .about.show {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     .about h3 {
@@ -146,6 +228,17 @@
       font-size: 14px;
     }
 
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(25px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
     @media (max-width: 900px) {
       .gallery {
         columns: 2;
@@ -157,13 +250,27 @@
     }
 
     @media (max-width: 600px) {
-
       nav {
-        padding: 22px;
+        padding: 20px;
+      }
+
+      .brand img {
+        width: 28px;
+      }
+
+      nav h1 {
+        font-size: 12px;
+        letter-spacing: 2px;
       }
 
       nav a {
-        margin-left: 12px;
+        margin-left: 10px;
+        font-size: 12px;
+      }
+
+      .toggle {
+        padding: 6px 10px;
+        font-size: 11px;
       }
 
       .gallery {
@@ -175,41 +282,38 @@
         font-size: 36px;
       }
     }
-
   </style>
 </head>
 
 <body>
 
   <nav>
-    <h1>PRACHI PATEL ARCHIVE</h1>
+    <div class="brand">
+      <h1>PRACHI PATEL</h1>
+      <img src="pp-logo.png" alt="Prachi Patel logo">
+    </div>
 
-    <div>
-      <a href="#work">Work</a>
-      <a href="#about">About</a>
+    <div class="nav-right">
+      <button class="toggle" onclick="toggleMode()">Dark</button>
+      <div>
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+      </div>
     </div>
   </nav>
 
   <section class="hero">
-
     <div>
       <h2>FRAGMENTS OF NEW YORK</h2>
-
-      <p>
-        Architecture • Texture • Urban Rhythm
-      </p>
+      <p>Architecture • Texture • Urban Rhythm</p>
     </div>
-
   </section>
 
   <section class="intro">
-
     <p>
-      A visual study of New York City architecture,
-      focusing on repetition, ornament, cast-iron details,
-      and the quiet rhythm of urban structures.
+      A visual study of New York City architecture, focusing on repetition,
+      ornament, cast-iron details, and the quiet rhythm of urban structures.
     </p>
-
   </section>
 
   <section class="gallery" id="work">
@@ -264,23 +368,60 @@
       <p>Figures embedded into architecture, turning facade into narrative.</p>
     </div>
 
+    <div class="photo">
+      <img src="building-1.jpeg">
+      <p>Architectural layers shaped by repetition, scale, and urban light.</p>
+    </div>
+
+    <div class="photo">
+      <img src="building-2.jpeg">
+      <p>A study of structure and atmosphere within New York’s built environment.</p>
+    </div>
+
   </section>
 
   <section class="about" id="about">
-
     <h3>About</h3>
 
     <p>
-      I’m Prachi Patel, a New York–based creative exploring architecture,
-      texture, and visual storytelling through photography and design.
-      My work focuses on details, repetition, and atmosphere throughout NYC.
-</p>
-
+      I’m Prachi Patel, a New York-based photographer and designer capturing
+      architectural details and visual rhythm throughout NYC.
+    </p>
   </section>
 
   <footer>
     © 2026 Prachi Patel
   </footer>
 
+  <script>
+    function toggleMode() {
+      document.body.classList.toggle("dark");
+
+      const button = document.querySelector(".toggle");
+      if (document.body.classList.contains("dark")) {
+        button.textContent = "Light";
+      } else {
+        button.textContent = "Dark";
+      }
+    }
+
+    const revealItems = document.querySelectorAll(".photo, .about");
+
+    const revealOnScroll = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    }, {
+      threshold: 0.15
+    });
+
+    revealItems.forEach(item => {
+      revealOnScroll.observe(item);
+    });
+  </script>
+
 </body>
 </html>
+    
