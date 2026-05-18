@@ -11,123 +11,124 @@
   <title>Prachi Patel Portfolio</title>
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
     }
 
-    html {
-      scroll-behavior: smooth;
+    html{
+      scroll-behavior:smooth;
     }
 
-    body {
-      background: #f7f5f0;
-      color: #111;
-      font-family: 'Inter', sans-serif;
-      transition: background 0.4s ease, color 0.4s ease;
+    body{
+      background:#f7f5f0;
+      color:#111;
+      font-family:'Inter',sans-serif;
+      transition:background 0.4s ease,color 0.4s ease;
     }
 
-    body.dark {
-      background: #0f0f0f;
-      color: #f7f5f0;
+    body.dark{
+      background:#0f0f0f;
+      color:#f5f5f5;
     }
 
-    nav {
-      padding: 24px 50px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: rgba(247, 245, 240, 0.88);
-      backdrop-filter: blur(12px);
-      z-index: 10;
-      transition: background 0.4s ease;
+    nav{
+      padding:24px 50px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      position:fixed;
+      top:0;
+      width:100%;
+      background:rgba(247,245,240,0.88);
+      backdrop-filter:blur(12px);
+      z-index:100;
+      transition:0.4s ease;
     }
 
-    body.dark nav {
-      background: rgba(15, 15, 15, 0.88);
+    body.dark nav{
+      background:rgba(15,15,15,0.88);
     }
 
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
     }
 
-    .brand img {
-      width: 34px;
-      height: auto;
-      mix-blend-mode: multiply;
+    .brand img{
+      width:34px;
+      height:auto;
+      mix-blend-mode:multiply;
     }
 
-    body.dark .brand img {
-      filter: invert(1);
-      mix-blend-mode: screen;
+    body.dark .brand img{
+      filter:invert(1);
+      mix-blend-mode:screen;
     }
 
-    nav h1 {
-      font-size: 15px;
-      letter-spacing: 3px;
-      font-weight: 500;
+    nav h1{
+      font-size:15px;
+      letter-spacing:3px;
+      font-weight:500;
     }
 
-    .nav-right {
-      display: flex;
-      align-items: center;
-      gap: 25px;
+    .nav-right{
+      display:flex;
+      align-items:center;
+      gap:22px;
     }
 
-    nav a {
-      color: inherit;
-      text-decoration: none;
-      margin-left: 22px;
-      font-size: 14px;
-      transition: opacity 0.3s ease;
+    nav a{
+      color:inherit;
+      text-decoration:none;
+      margin-left:18px;
+      font-size:14px;
+      transition:0.3s ease;
     }
 
-    nav a:hover {
-      opacity: 0.55;
+    nav a:hover{
+      opacity:0.55;
     }
 
-    .toggle {
-      border: 1px solid currentColor;
-      background: transparent;
-      color: inherit;
-      padding: 7px 12px;
-      border-radius: 20px;
-      cursor: pointer;
-      font-size: 12px;
-      letter-spacing: 1px;
+    .toggle{
+      border:1px solid currentColor;
+      background:none;
+      color:inherit;
+      padding:7px 12px;
+      border-radius:20px;
+      cursor:pointer;
+      font-size:12px;
+      letter-spacing:1px;
     }
 
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 130px 20px 70px;
-      animation: fadeUp 1.2s ease both;
+    .hero{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:130px 20px 70px;
+      animation:fadeUp 1.2s ease both;
     }
 
-    .hero h2 {
-      font-size: 78px;
-      font-weight: 300;
-      letter-spacing: 4px;
-      margin-bottom: 20px;
-      font-family: 'Cormorant Garamond', serif;
+    .hero h2{
+      font-size:78px;
+      font-weight:300;
+      letter-spacing:4px;
+      margin-bottom:20px;
+      font-family:'Cormorant Garamond',serif;
     }
 
-    .hero p {
-      max-width: 720px;
-      margin: auto;
-      color: #555;
-      letter-spacing: 1.2px;
-      font-size: 16px;
-      line-height: 1.8;
+    .hero p{
+      max-width:700px;
+      margin:auto;
+      color:#555;
+      line-height:1.8;
+      letter-spacing:1px;
+      font-size:16px;
     }
 
     body.dark .hero p,
@@ -135,283 +136,294 @@
     body.dark .photo p,
     body.dark .about p,
     body.dark .project-note,
-    body.dark footer {
-      color: #b8b8b8;
+    body.dark footer{
+      color:#b5b5b5;
     }
 
-    .intro {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px 25px 100px;
-      text-align: center;
-      line-height: 1.9;
-      color: #444;
-      font-size: 17px;
+    .intro{
+      max-width:820px;
+      margin:auto;
+      padding:20px 25px 90px;
+      text-align:center;
+      line-height:1.9;
+      color:#444;
+      font-size:17px;
     }
 
-    .section-title {
-      padding: 40px 45px 25px;
-      text-align: center;
+    .tags{
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:30px;
     }
 
-    .section-title h3 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 44px;
-      font-weight: 300;
-      margin-bottom: 12px;
+    .tags span{
+      border:1px solid currentColor;
+      padding:8px 14px;
+      border-radius:999px;
+      font-size:12px;
+      letter-spacing:1px;
+      opacity:0.75;
     }
 
-    .project-note {
-      max-width: 650px;
-      margin: auto;
-      color: #555;
-      line-height: 1.7;
-      font-size: 15px;
+    .section-title{
+      padding:40px 45px 25px;
+      text-align:center;
     }
 
-    .tags {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 28px;
+    .section-title h3{
+      font-family:'Cormorant Garamond',serif;
+      font-size:44px;
+      font-weight:300;
+      margin-bottom:12px;
     }
 
-    .tags span {
-      border: 1px solid currentColor;
-      padding: 8px 14px;
-      border-radius: 999px;
-      font-size: 12px;
-      letter-spacing: 1px;
-      opacity: 0.75;
+    .project-note{
+      max-width:650px;
+      margin:auto;
+      color:#555;
+      line-height:1.7;
+      font-size:15px;
     }
 
-    .gallery {
-      padding: 30px 45px 100px;
-      columns: 3;
-      column-gap: 22px;
+    .gallery{
+      padding:30px 45px 100px;
+      columns:3;
+      column-gap:22px;
     }
 
-    .photo {
-      break-inside: avoid;
-      margin-bottom: 24px;
-      opacity: 0;
-      transform: translateY(35px);
-      transition: opacity 0.9s ease, transform 0.9s ease;
+    .photo{
+      break-inside:avoid;
+      margin-bottom:24px;
+      opacity:0;
+      transform:translateY(35px);
+      transition:opacity 0.9s ease, transform 0.9s ease;
     }
 
-    .photo.show {
-      opacity: 1;
-      transform: translateY(0);
+    .photo.show{
+      opacity:1;
+      transform:translateY(0);
     }
 
-    .photo img {
-      width: 100%;
-      border-radius: 14px;
-      display: block;
-      transition: transform 0.5s ease, opacity 0.4s ease, filter 0.4s ease;
+    .photo img{
+      width:100%;
+      border-radius:14px;
+      display:block;
+      transition:transform 0.5s ease, opacity 0.4s ease;
     }
 
-    .photo img:hover {
-      transform: scale(1.015);
-      opacity: 0.9;
+    .photo img:hover{
+      transform:scale(1.015);
+      opacity:0.92;
     }
 
-    body.dark .photo img {
-      filter: brightness(0.9) contrast(1.05);
+    .photo p{
+      font-size:13px;
+      color:#555;
+      margin-top:8px;
+      line-height:1.5;
     }
 
-    .photo p {
-      font-size: 13px;
-      color: #555;
-      margin-top: 8px;
-      line-height: 1.5;
+    .process{
+      max-width:900px;
+      margin:auto;
+      padding:40px 25px 110px;
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:22px;
     }
 
-    .process {
-      max-width: 900px;
-      margin: auto;
-      padding: 40px 25px 110px;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
+    .process-card{
+      border:1px solid rgba(120,120,120,0.3);
+      border-radius:18px;
+      padding:26px;
+      opacity:0;
+      transform:translateY(35px);
+      transition:opacity 0.9s ease, transform 0.9s ease;
     }
 
-    .process-card {
-      border: 1px solid rgba(120,120,120,0.3);
-      border-radius: 18px;
-      padding: 26px;
-      min-height: 180px;
-      opacity: 0;
-      transform: translateY(35px);
-      transition: opacity 0.9s ease, transform 0.9s ease;
+    .process-card.show{
+      opacity:1;
+      transform:translateY(0);
     }
 
-    .process-card.show {
-      opacity: 1;
-      transform: translateY(0);
+    .process-card h4{
+      font-family:'Cormorant Garamond',serif;
+      font-size:28px;
+      font-weight:300;
+      margin-bottom:14px;
     }
 
-    .process-card h4 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 28px;
-      font-weight: 300;
-      margin-bottom: 14px;
+    .process-card p{
+      color:#555;
+      line-height:1.7;
+      font-size:14px;
     }
 
-    .process-card p {
-      color: #555;
-      line-height: 1.7;
-      font-size: 14px;
+    .about{
+      max-width:760px;
+      margin:auto;
+      padding:100px 25px;
+      text-align:center;
+      opacity:0;
+      transform:translateY(35px);
+      transition:opacity 0.9s ease, transform 0.9s ease;
     }
 
-    body.dark .process-card p {
-      color: #b8b8b8;
+    .about.show{
+      opacity:1;
+      transform:translateY(0);
     }
 
-    .about {
-      max-width: 760px;
-      margin: auto;
-      padding: 100px 25px;
-      text-align: center;
-      opacity: 0;
-      transform: translateY(35px);
-      transition: opacity 0.9s ease, transform 0.9s ease;
+    .about h3{
+      font-size:40px;
+      font-weight:300;
+      margin-bottom:25px;
+      font-family:'Cormorant Garamond',serif;
     }
 
-    .about.show {
-      opacity: 1;
-      transform: translateY(0);
+    .about p{
+      color:#444;
+      line-height:1.9;
+      font-size:16px;
     }
 
-    .about h3 {
-      font-size: 40px;
-      font-weight: 300;
-      margin-bottom: 25px;
-      font-family: 'Cormorant Garamond', serif;
+    .contact{
+      text-align:center;
+      padding:20px 20px 50px;
     }
 
-    .about p {
-      color: #444;
-      line-height: 1.9;
-      font-size: 16px;
+    .contact a{
+      color:inherit;
+      text-decoration:none;
+      border-bottom:1px solid currentColor;
+      font-size:14px;
+      letter-spacing:0.5px;
+      transition:0.3s ease;
     }
 
-    .contact {
-      text-align: center;
-      padding: 70px 25px;
+    .contact a:hover{
+      opacity:0.6;
     }
 
-    .contact a {
-      color: inherit;
-      text-decoration: none;
-      border-bottom: 1px solid currentColor;
-      margin: 0 10px;
-      font-size: 14px;
+    footer{
+      text-align:center;
+      padding:50px;
+      color:#777;
+      font-size:14px;
     }
 
-    footer {
-      text-align: center;
-      padding: 50px;
-      color: #777;
-      font-size: 14px;
-    }
-
-    @keyframes fadeUp {
-      from {
-        opacity: 0;
-        transform: translateY(25px);
+    @keyframes fadeUp{
+      from{
+        opacity:0;
+        transform:translateY(25px);
       }
-      to {
-        opacity: 1;
-        transform: translateY(0);
+
+      to{
+        opacity:1;
+        transform:translateY(0);
       }
     }
 
-    @media (max-width: 900px) {
-      .gallery {
-        columns: 2;
+    @media(max-width:900px){
+
+      .gallery{
+        columns:2;
       }
 
-      .hero h2 {
-        font-size: 50px;
+      .hero h2{
+        font-size:50px;
       }
 
-      .process {
-        grid-template-columns: 1fr;
+      .process{
+        grid-template-columns:1fr;
       }
+
     }
 
-    @media (max-width: 600px) {
-      nav {
-        padding: 20px;
+    @media(max-width:600px){
+
+      nav{
+        padding:20px;
       }
 
-      .brand img {
-        width: 28px;
+      .brand img{
+        width:28px;
       }
 
-      nav h1 {
-        font-size: 12px;
-        letter-spacing: 2px;
+      nav h1{
+        font-size:12px;
+        letter-spacing:2px;
       }
 
-      nav a {
-        margin-left: 10px;
-        font-size: 12px;
+      nav a{
+        margin-left:10px;
+        font-size:12px;
       }
 
-      .toggle {
-        padding: 6px 10px;
-        font-size: 11px;
+      .gallery{
+        columns:1;
+        padding:25px;
       }
 
-      .gallery {
-        columns: 1;
-        padding: 25px;
+      .hero h2{
+        font-size:38px;
       }
 
-      .hero h2 {
-        font-size: 38px;
-      }
     }
+
   </style>
 </head>
 
 <body>
 
   <nav>
+
     <div class="brand">
       <h1>PRACHI PATEL</h1>
-      <img src="pp-logo.png" alt="Prachi Patel logo">
+      <img src="pp-logo.png">
     </div>
 
     <div class="nav-right">
-      <button class="toggle" onclick="toggleMode()">Dark</button>
+
+      <button class="toggle" onclick="toggleMode()">
+        Dark
+      </button>
+
       <div>
         <a href="#work">Work</a>
         <a href="#process">Process</a>
         <a href="#about">About</a>
       </div>
+
     </div>
+
   </nav>
 
   <section class="hero">
+
     <div>
-      <h2>FRAGMENTS OF NEW YORK</h2>
+
+      <h2>
+        FRAGMENTS OF NEW YORK
+      </h2>
+
       <p>
-        Exploring architecture, rhythm, texture, and urban observation
-        through photography and design.
+        Exploring architecture, rhythm, texture,
+        and urban observation through photography and design.
       </p>
+
     </div>
+
   </section>
 
   <section class="intro">
+
     <p>
-      This project documents New York City’s built environment through repetition,
-      ornament, cast-iron details, stone surfaces, and quiet architectural rhythm.
-      The series connects photography with design thinking by observing how structure,
-      pattern, and atmosphere shape the way we experience the city.
+      This project documents New York City’s built environment
+      through repetition, ornament, cast-iron details,
+      stone surfaces, and quiet architectural rhythm.
     </p>
 
     <div class="tags">
@@ -421,13 +433,18 @@
       <span>URBAN RHYTHM</span>
       <span>TEXTURE</span>
     </div>
+
   </section>
 
   <section class="section-title" id="work">
+
     <h3>Selected Works</h3>
+
     <p class="project-note">
-      A curated visual archive of architectural details, facades, and structural patterns across NYC.
+      A curated visual archive of architectural details,
+      facades, and structural patterns across NYC.
     </p>
+
   </section>
 
   <section class="gallery">
@@ -439,42 +456,42 @@
 
     <div class="photo">
       <img src="IMG_2897.jpeg">
-      <p>Soft architectural details shaped by light, texture, and structure.</p>
+      <p>Soft architectural details shaped by light and structure.</p>
     </div>
 
     <div class="photo">
       <img src="IMG_2899.jpeg">
-      <p>Vertical rhythm created through windows, columns, and ornament.</p>
+      <p>Vertical rhythm created through windows and ornament.</p>
     </div>
 
     <div class="photo">
       <img src="IMG_2900.jpeg">
-      <p>Decorative ironwork and layered historic detail in downtown Manhattan.</p>
+      <p>Decorative ironwork layered through downtown Manhattan.</p>
     </div>
 
     <div class="photo">
       <img src="IMG_3067 2.jpeg">
-      <p>Geometry and repetition within a red brick urban facade.</p>
+      <p>Geometry and repetition within a red brick facade.</p>
     </div>
 
     <div class="photo">
       <img src="IMG_3300.jpeg">
-      <p>Surface detail as a record of material, history, and design.</p>
+      <p>Surface detail as a record of material and design.</p>
     </div>
 
     <div class="photo">
       <img src="IMG_3395.jpeg">
-      <p>Scale and weight expressed through stone, arches, and shadow.</p>
+      <p>Scale and weight expressed through arches and shadow.</p>
     </div>
 
     <div class="photo">
       <img src="IMG_3639.jpeg">
-      <p>Gothic forms emerging through vertical lines and carved detail.</p>
+      <p>Gothic forms emerging through carved architectural detail.</p>
     </div>
 
     <div class="photo">
       <img src="IMG_3640.jpeg">
-      <p>Ornament and structure meet through repeated carved patterns.</p>
+      <p>Ornament and structure meeting through repeated patterns.</p>
     </div>
 
     <div class="photo">
@@ -484,67 +501,80 @@
 
     <div class="photo">
       <img src="building-1.jpeg">
-      <p>Architectural layers shaped by repetition, scale, and urban light.</p>
+      <p>Architectural layers shaped by repetition and urban light.</p>
     </div>
 
     <div class="photo">
       <img src="building-2.jpeg">
-      <p>A study of structure and atmosphere within New York’s built environment.</p>
+      <p>A study of atmosphere within New York’s built environment.</p>
     </div>
 
   </section>
 
   <section class="section-title" id="process">
+
     <h3>Process</h3>
+
     <p class="project-note">
-      My process begins with observation: walking, framing, cropping, and identifying repeated visual systems in the city.
+      My process begins with observation:
+      walking, framing, cropping,
+      and identifying repeated visual systems in the city.
     </p>
+
   </section>
 
   <section class="process">
+
     <div class="process-card">
       <h4>Observation</h4>
+
       <p>
-        I look for rhythm in windows, columns, facades, shadows, and ornament,
-        treating the city as a visual system.
+        I look for rhythm in windows, facades,
+        shadows, and ornament throughout the city.
       </p>
     </div>
 
     <div class="process-card">
       <h4>Composition</h4>
+
       <p>
-        I use cropping, symmetry, repetition, and negative space to turn architectural details
+        I use cropping, repetition,
+        and negative space to turn architecture
         into structured visual studies.
       </p>
     </div>
 
     <div class="process-card">
       <h4>Design Connection</h4>
+
       <p>
-        My photography connects to UI/UX and graphic design through hierarchy,
-        pattern, layout, and visual storytelling.
+        My photography connects to UI/UX and graphic design
+        through hierarchy, systems, and visual storytelling.
       </p>
     </div>
+
   </section>
 
   <section class="about" id="about">
+
     <h3>About</h3>
 
     <p>
-      I’m Prachi Patel, a New York-based designer and photographer exploring the
-relationship between architecture, visual systems, and digital experience.
+      I’m Prachi Patel, a New York-based designer and photographer exploring the relationship between architecture, visual systems, and digital experience.
 
-My background in computer science, graphic design, and photography informs my
-interest in interaction, structure, rhythm, and urban observation.
+      My background in computer science, graphic design, and photography informs my interest in interaction, structure, rhythm, and urban observation.
 
-Currently completing a B.A. in Computer Science with a minor in Graphic Design
-at Pace University in New York City.
+      Currently completing a B.A. in Computer Science with a minor in Graphic Design at Pace University in New York City.
     </p>
+
   </section>
 
   <section class="contact">
-    <a href="mailto:patelprachi670@gmail.com">Email</a>
-    <a href="https://github.com/prachi050" target="_blank">GitHub</a>
+
+    <a href="mailto:patelprachi670@gmail.com">
+      patelprachi670@gmail.com
+    </a>
+
   </section>
 
   <footer>
@@ -552,33 +582,43 @@ at Pace University in New York City.
   </footer>
 
   <script>
-    function toggleMode() {
+
+    function toggleMode(){
+
       document.body.classList.toggle("dark");
 
-      const button = document.querySelector(".toggle");
+      const button=document.querySelector(".toggle");
 
-      if (document.body.classList.contains("dark")) {
-        button.textContent = "Light";
-      } else {
-        button.textContent = "Dark";
+      if(document.body.classList.contains("dark")){
+        button.textContent="Light";
       }
+
+      else{
+        button.textContent="Dark";
+      }
+
     }
 
-    const revealItems = document.querySelectorAll(".photo, .about, .process-card");
+    const revealItems=document.querySelectorAll(".photo,.about,.process-card");
 
-    const revealOnScroll = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
+    const revealOnScroll=new IntersectionObserver((entries)=>{
+
+      entries.forEach(entry=>{
+
+        if(entry.isIntersecting){
           entry.target.classList.add("show");
         }
+
       });
-    }, {
-      threshold: 0.15
+
+    },{
+      threshold:0.15
     });
 
-    revealItems.forEach(item => {
+    revealItems.forEach(item=>{
       revealOnScroll.observe(item);
     });
+
   </script>
 
 </body>
