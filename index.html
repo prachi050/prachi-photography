@@ -66,12 +66,12 @@ background:rgba(15,15,15,0.85);
 .logo-wrap{
 display:flex;
 align-items:center;
-gap:16px;
+gap:18px;
 }
 
 .logo-wrap img{
-width:50px;
-height:50px;
+width:82px;
+height:82px;
 object-fit:contain;
 }
 
@@ -119,6 +119,7 @@ align-items:center;
 text-align:center;
 padding:110px 20px 10px;
 }
+
 .hero h1{
 font-size:110px;
 font-weight:300;
@@ -127,15 +128,24 @@ line-height:0.9;
 animation:fadeUp 1.4s ease;
 }
 
-.hero p{
-margin-top:20px;
+.hero-subtitle{
+margin-top:24px;
 font-size:18px;
 opacity:0.75;
 animation:fadeUp 1.8s ease;
 }
 
+.hero-description{
+max-width:720px;
+margin:58px auto 0;
+font-size:16px;
+line-height:1.9;
+opacity:0.72;
+animation:fadeUp 2.1s ease;
+}
+
 .gallery{
-padding:80px 30px 80px;
+padding:20px 30px 80px;
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
 gap:22px;
@@ -296,23 +306,15 @@ grid-template-columns:1fr;
 grid-template-columns:1fr;
 }
 
-.hero-subtitle{
-margin-top:24px;
-font-size:18px;
-opacity:0.75;
-animation:fadeUp 1.8s ease;
+.logo-wrap img{
+width:58px;
+height:58px;
 }
 
-.hero-description{
-max-width:720px;
-margin:58px auto 0;
-font-size:16px;
-line-height:1.9;
-opacity:0.72;
-animation:fadeUp 2.1s ease;
 }
 
 </style>
+
 </head>
 
 <body>
@@ -350,15 +352,16 @@ Architectural<br>
 Photography
 </h1>
 
-<p>
+<p class="hero-subtitle">
 New York City · Texture · Structure · Atmosphere
 </p>
 
 <p class="hero-description">
 Exploring architecture, rhythm, texture, and urban observation through photography and design.
 </p>
-  
+
 </div>
+
 </section>
 
 <section class="gallery fade-section" id="work">
@@ -466,13 +469,17 @@ document.body.classList.toggle("dark");
 const sections = document.querySelectorAll('.fade-section');
 
 window.addEventListener('scroll', () => {
+
 sections.forEach(section => {
+
 const sectionTop = section.getBoundingClientRect().top;
 
 if(sectionTop < window.innerHeight - 100){
 section.classList.add('visible');
 }
+
 });
+
 });
 
 </script>
