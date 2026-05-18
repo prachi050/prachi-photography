@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Prachi Patel Portfolio</title>
 
@@ -65,17 +66,17 @@ background:rgba(15,15,15,0.85);
 .logo-wrap{
 display:flex;
 align-items:center;
-gap:14px;
+gap:16px;
 }
 
 .logo-wrap img{
-width:42px;
-height:42px;
+width:50px;
+height:50px;
 object-fit:contain;
 }
 
 .logo{
-font-size:32px;
+font-size:30px;
 letter-spacing:5px;
 font-family:'Cormorant Garamond',serif;
 }
@@ -152,6 +153,54 @@ animation:fadeReveal 1s forwards;
 
 .gallery img:hover{
 transform:scale(1.02);
+}
+
+.process-section{
+padding:120px 30px;
+max-width:1000px;
+margin:auto;
+text-align:center;
+}
+
+.process-section h2{
+font-size:70px;
+font-family:'Cormorant Garamond',serif;
+font-weight:300;
+margin-bottom:20px;
+}
+
+.process-intro{
+max-width:680px;
+margin:0 auto 50px;
+font-size:16px;
+line-height:1.8;
+opacity:0.75;
+}
+
+.process-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:22px;
+}
+
+.process-card{
+border:1px solid rgba(120,120,120,0.35);
+padding:30px;
+border-radius:18px;
+text-align:left;
+}
+
+.process-card h3{
+font-family:'Cormorant Garamond',serif;
+font-size:30px;
+font-weight:300;
+margin-bottom:14px;
+}
+
+.process-card p{
+font-size:14px;
+line-height:1.8;
+opacity:0.75;
 }
 
 .about{
@@ -235,11 +284,16 @@ padding:22px 20px;
 font-size:58px;
 }
 
-.about h2{
+.about h2,
+.process-section h2{
 font-size:48px;
 }
 
 .gallery{
+grid-template-columns:1fr;
+}
+
+.process-grid{
 grid-template-columns:1fr;
 }
 
@@ -261,10 +315,15 @@ grid-template-columns:1fr;
 </div>
 
 <nav>
-<button class="toggle-btn" onclick="toggleDark()">Dark</button>
+
+<button class="toggle-btn" onclick="toggleDark()">
+Dark
+</button>
 
 <a href="#work">Work</a>
+<a href="#process">Process</a>
 <a href="#about">About</a>
+
 </nav>
 
 </header>
@@ -289,17 +348,67 @@ New York City · Texture · Structure · Atmosphere
 <section class="gallery fade-section" id="work">
 
 <img src="IMG_2897.jpeg">
-  <img src="IMG_2898.jpeg">
-  <img src="IMG_2899.jpeg">
-  <img src="IMG_2900.jpeg">
-  <img src="IMG_3067 2.jpeg">
-  <img src="IMG_3300.jpeg">
-  <img src="IMG_3395.jpeg">
-  <img src="IMG_3639.jpeg">
-  <img src="IMG_3640.jpeg">
-  <img src="IMG_4103(2).jpeg">
-  <img src="building-1.jpeg">
-  <img src="building-2.jpeg">
+<img src="IMG_2898.jpeg">
+<img src="IMG_2899.jpeg">
+<img src="IMG_2900.jpeg">
+<img src="IMG_3067 2.jpeg">
+<img src="IMG_3300.jpeg">
+<img src="IMG_3395.jpeg">
+<img src="IMG_3639.jpeg">
+<img src="IMG_3640.jpeg">
+<img src="IMG_4103(2).jpeg">
+<img src="building-1.jpeg">
+<img src="building-2.jpeg">
+
+</section>
+
+<section class="process-section fade-section" id="process">
+
+<h2>Process</h2>
+
+<p class="process-intro">
+My process begins with observation: walking through the city,
+identifying rhythm, texture, structure, and atmosphere within
+architecture and urban spaces.
+</p>
+
+<div class="process-grid">
+
+<div class="process-card">
+
+<h3>Observation</h3>
+
+<p>
+I document repetition, shadow, geometry,
+and architectural details throughout New York City.
+</p>
+
+</div>
+
+<div class="process-card">
+
+<h3>Composition</h3>
+
+<p>
+Through framing and negative space,
+I transform buildings into structured visual compositions.
+</p>
+
+</div>
+
+<div class="process-card">
+
+<h3>Design Thinking</h3>
+
+<p>
+My background in graphic design and computer science influences
+the way I approach hierarchy, systems, and visual storytelling.
+</p>
+
+</div>
+
+</div>
+
 </section>
 
 <section class="about fade-section" id="about">
@@ -307,7 +416,11 @@ New York City · Texture · Structure · Atmosphere
 <h2>About</h2>
 
 <p>
-I’m Prachi Patel, a New York-based designer and photographer exploring the relationship between architecture, visual systems, and digital experience. My background in computer science, graphic design, and photography informs my interest in interaction, structure, rhythm, and urban observation. Currently completing a B.A. in Computer Science with a minor in Graphic Design at Pace University in New York City.
+I’m Prachi Patel, a New York-based designer and photographer exploring the relationship between architecture, visual systems, and digital experience.
+
+My background in computer science, graphic design, and photography informs my interest in interaction, structure, rhythm, and urban observation.
+
+Currently completing a B.A. in Computer Science with a minor in Graphic Design at Pace University in New York City.
 </p>
 
 </section>
